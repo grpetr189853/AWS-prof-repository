@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SQS to SNS.
+Resources:
+  function:
+    Type: AWS::Serverless::Function
+    Properties:
+      #      CodeUri: s3://dzmitry.kuskou.bucket/awp-1.0.zip/build/distributions/awp-1.0.zip
+#      CodeUri: s3://task9-grigory-petrenko/lambda-artifact/awp-1.0.zip
+      Handler: com.epam.aws.awp.handler.ImageProcessHandler
+      FunctionName: AWP-uploads-batch-notifier
+      Runtime: java8
+      Description: Java function
+      MemorySize: 512
+      Timeout: 10
+      Policies:
+        - AWSLambda_FullAccess
+        - AWSLambdaSQSQueueExecutionRole
+        - AmazonSNSFullAccess
+        - AmazonSQSFullAccess
+      Tracing: Active
+      AutoPublishAlias: live
+      DeploymentPreference:
+        Type: Canary10Percent10Minutes
