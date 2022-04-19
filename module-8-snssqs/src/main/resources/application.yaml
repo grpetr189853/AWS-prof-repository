@@ -1,0 +1,23 @@
+s3:
+  bucket-name: 
+  region: 
+sns:
+  region: 
+  topic-arn: 
+sqs:
+  region: 
+  queue-url: 
+lambda:
+  region: 
+  function-name: 
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/aws_training
+    username: root
+    password: 18985320061980
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+flyway:
+  enabled: true
