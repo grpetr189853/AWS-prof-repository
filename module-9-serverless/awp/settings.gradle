@@ -1,0 +1,6 @@
+rootProject.name = 'awp'
+include 'ec2'
+include 'lambda'
+include 'lambda2'
+include 'lambda3'
+

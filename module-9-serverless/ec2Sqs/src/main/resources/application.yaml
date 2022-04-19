@@ -1,0 +1,12 @@
+s3:
+  bucket-name: 
+  region: 
+sns:
+  region: 
+  topic-arn: 
+sqs:
+  region: 
+  queue-url: 
+lambda:
+  region: 
+  functionARN: 
